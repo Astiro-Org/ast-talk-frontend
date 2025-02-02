@@ -1,9 +1,12 @@
 @import "fonts.scss";
+@import "margins.scss";
 
 :root {
-  --dark-color: #f0f0f0;
-  --light-color: #0d0d0d;
+  --light-color: #f0f0f0;
+  --dark-color: #0d0d0d;
   --primary-color: #009b95;
+  --gray-color: #5f646d;
+  --main-ff: "JetBrains Mono", "Lucida Sans", Geneva, sans-serif;
 }
 
 *,
@@ -14,9 +17,14 @@
 }
 
 body {
-  font-family: "JetBrains Mono", "Lucida Sans", Geneva, sans-serif;
+  font-family: var(--main-ff);
   background: var(--dark-color);
   color: var(--light-color);
+  background-image: url("/assets/images/bg.jpg");
+}
+
+button {
+  font-family: var(--main-ff);
 }
 
 .skill-tag {
@@ -34,7 +42,7 @@ body {
   font-weight: 700;
   line-height: 1.5;
   background: var(--primary-color);
-  color: var(--dark-color);
+  color: var(--light-color);
   border: none;
   border-radius: 2px;
   transition: all 0.2s ease-in;
@@ -48,6 +56,12 @@ body {
 .btn:disabled {
   background: lighten(#009b95, 5%);
   cursor: not-allowed;
+}
+
+.font--h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.125;
 }
 
 .font--h6 {
@@ -66,4 +80,31 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1rem;
+}
+
+.at-label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.at-label:last-of-type {
+  margin-bottom: 0;
+}
+
+.at-label__title {
+  margin-bottom: 8px;
+}
+
+.at-input {
+  padding: 12px 20px;
+  width: 100%;
+  display: block;
+  font-family: var(--main-ff);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--light-color);
+  background-color: var(--dark-color);
+  border: 1px solid var(--light-color);
+  border-radius: 2px;
 }
