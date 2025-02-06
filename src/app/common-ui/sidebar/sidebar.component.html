@@ -1,1 +1,18 @@
-<p>sidebar works!</p>
+<img
+  class="ml--16 mb--32"
+  src="/assets/images/logo-small.svg"
+  alt="logo-small"
+/>
+
+<nav>
+  <ul class="menu-list">
+    @for (menuItem of menuItems; track menuItem) {
+    <li>
+      <a class="menu-list__item" [routerLink]="[menuItem.link]">
+        <svg [icon]="menuItem.icon" class="menu-list__icon"></svg>
+        <span>{{ menuItem.label }}</span>
+      </a>
+    </li>
+    }
+  </ul>
+</nav>

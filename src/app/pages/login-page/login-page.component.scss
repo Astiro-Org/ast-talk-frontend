@@ -14,34 +14,33 @@
 .login-form {
   width: 440px;
   color: #ffffff;
-}
 
-.login-form__title {
-  margin-bottom: 60px;
-}
+  &__title {
+    margin-bottom: 60px;
+  }
 
-.login-form__logo {
-  width: 355px;
-  height: auto;
-  background-color: antiquewhite;
-}
+  &__logo {
+    width: 355px;
+    height: auto;
+  }
 
-.login-form__btn {
-  position: relative;
-  width: 100%;
-  border: 1px solid var(--dark-color);
-}
+  &__btn {
+    position: relative;
+    width: 100%;
+    border: 1px solid var(--dark-color);
 
-.login-form__btn::before {
-  content: "";
-  position: absolute;
-  right: -4px;
-  bottom: -4px;
-  width: 100%;
-  height: 100%;
-  border-radius: 2px;
-  background-color: var(--gray-color);
-  z-index: -1;
+    &::before {
+      content: "";
+      position: absolute;
+      right: -4px;
+      bottom: -4px;
+      width: 100%;
+      height: 100%;
+      border-radius: 2px;
+      background-color: var(--gray-color);
+      z-index: -1;
+    }
+  }
 }
 
 .at-input-password-wrapper {
@@ -68,12 +67,12 @@
   opacity: 0.75;
   transition: opacity 0.2s ease-in;
   cursor: pointer;
-}
 
-.at-password-eye-btn:hover {
-  opacity: 1;
-}
+  &:hover {
+    opacity: 1;
+  }
 
-.at-password-eye-btn.active {
-  color: var(--primary-color);
+  &.active {
+    color: var(--primary-color);
+  }
 }

@@ -1,0 +1,41 @@
+:host {
+  padding: 20px 12px;
+}
+
+.menu-list {
+  padding: 0;
+  display: grid;
+  grid-gap: 8px;
+  list-style: none;
+
+  &__item {
+    padding: 16px 12px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 16px 1fr max-content;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: var(--light-color);
+    background: none;
+    border: none;
+    text-align: left;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--dark-hover-color);
+      color: var(--primary-color);
+      border-radius: 2px;
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+  }
+}
