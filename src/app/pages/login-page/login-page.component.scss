@@ -43,3 +43,37 @@
   background-color: var(--gray-color);
   z-index: -1;
 }
+
+.at-input-password-wrapper {
+  position: relative;
+}
+
+.at-input-password {
+  padding-right: 52px;
+}
+
+.at-password-eye-btn {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  transform: translateY(-50%);
+  opacity: 0.75;
+  transition: opacity 0.2s ease-in;
+  cursor: pointer;
+}
+
+.at-password-eye-btn:hover {
+  opacity: 1;
+}
+
+.at-password-eye-btn.active {
+  color: var(--primary-color);
+}

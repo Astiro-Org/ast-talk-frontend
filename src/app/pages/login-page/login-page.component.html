@@ -14,12 +14,21 @@
 
     <label class="at-label">
       <p class="at-label__title">Пароль</p>
-      <input
-        class="at-input"
-        formControlName="password"
-        type="password"
-        placeholder="Введите пароль"
-      />
+      <div class="at-input-password-wrapper">
+        <input
+          class="at-input at-input-password"
+          formControlName="password"
+          [type]="isPasswordVisible() ? 'text' : 'password'"
+          placeholder="Введите пароль"
+        />
+        <button
+          class="at-password-eye-btn"
+          [class.active]="isPasswordVisible()"
+          (click)="isPasswordVisible.set(!isPasswordVisible())"
+        >
+          <icon-crossed-eye />
+        </button>
+      </div>
     </label>
 
     <button class="btn login-form__btn mt--32" type="submit">Вход</button>
