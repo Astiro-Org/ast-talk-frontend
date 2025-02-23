@@ -16,3 +16,27 @@
     }
   </ul>
 </nav>
+
+<p class="font--medium mt--16 mb--16">Подписчики</p>
+
+@for (subscriber of subscribers$ | async; track subscriber.id) {
+<app-subscriber-card [profile]="subscriber"></app-subscriber-card>
+}
+
+<div class="to-subscribers mt--16">
+  <a class="to-subscribers__link font--medium" [routerLink]="['/subscribers']">
+    Все подписчики
+  </a>
+  <svg icon="arrow" class="to-subscribers__icon"></svg>
+</div>
+
+<footer class="sidebar-footer">
+  @if (me(); as me) {
+  <img class="sidebar-footer__img" [src]="me.avatarUrl | imgUrl" alt="" />
+
+  <div class="sidebar-footer__username font--medium">{{ me.username }}</div>
+  <a [routerLink]="['/settings']" class="sidebar-footer__settings">
+    <svg icon="settings" class="sidebar-footer__settings-icon"></svg>
+  </a>
+  }
+</footer>

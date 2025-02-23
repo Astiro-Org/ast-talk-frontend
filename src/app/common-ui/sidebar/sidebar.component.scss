@@ -1,5 +1,7 @@
 :host {
+  position: relative;
   padding: 20px 12px;
+  background: var(--dark-solid-color);
 }
 
 .menu-list {
@@ -37,5 +39,73 @@
   &__icon {
     width: 16px;
     height: 16px;
+  }
+}
+
+.to-subscribers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &__link {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--primary-color);
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    color: var(--light-color);
+    transition: all 0.2s ease-in;
+  }
+
+  &__link:hover + &__icon {
+    color: var(--primary-color);
+  }
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 24px);
+  padding: 4px 16px;
+  display: grid;
+  grid-template-columns: 32px 1fr 16px;
+  grid-gap: 12px;
+  align-items: center;
+  background: var(--dark-hover-color);
+  border-radius: 2px;
+
+  &__img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  &__username {
+    color: var(--primary-color);
+  }
+
+  &__settings {
+    width: 14px;
+    height: 14px;
+    text-decoration: none;
+
+    &-icon {
+      width: 14px;
+      height: 14px;
+      color: var(--light-color);
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover > &-icon {
+      color: var(--primary-color);
+    }
   }
 }
